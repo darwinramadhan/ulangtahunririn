@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: rgb(17, 133, 228);
+  background: url(1948142.jpg);
+  background-size: cover;
+}
+
+section h2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  line-height: 100vh;
+  font-size: 5vh;
+  font-weight: 700;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner .blocks {
+  position: relative;
+  display: block;
+  width: 20vw;
+  height: 20vw;
+  animation: animate 10s ease-in-out forwards;
+}
+
+.banner .blocks:nth-child(even){
+  animation: animate 3s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n+3){
+  animation: animate 4.5s ease-in-out forwards;
+}
+.banner .blocks:nth-child(7n+7){
+  animation: animate 3.5s ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(1000px);
+  }
+  50% {
+    opacity: 1;
+    background: url(IMG-20210929-WA0001.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+    background: url(IMG-20210929-WA0001.jpg);
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  }
+}
